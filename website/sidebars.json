@@ -1,10 +1,36 @@
 {
   "docs": {
-    "시작하기": ["getting-started-overview","getting-started-creating-application","getting-started-creating-three-core","getting-started-linking-service-module","getting-started-requesting-your-api"],
-    "가이드 - 기본": ["basic-guides-dashboard","basic-guides-application","basic-guides-managing-rbac"],
-    "가이드 - 코어": ["core-guides-model","core-guides-router","core-guides-business-logic"],
-    "가이드 - 모듈": ["service-module-guides-authentication","service-module-guides-storage","service-module-guides-message","service-module-guides-payment"],
-    "가이드 - Public": ["public-api-guide"]
+    "시작하기": [
+      "getting-started-overview",
+      "getting-started-creating-application",
+      "getting-started-using-three-core",
+      "getting-started-linking-service-module",
+      "getting-started-requesting-your-api"
+    ],
+    "가이드 - 일반": [
+      "basic-guides-dashboard",
+      "basic-guides-how-to-manage-account",
+      "basic-guides-how-to-manage-rbac",
+      "basic-guides-register-and-use-coupon",
+      "basic-guides-register-credit-card",
+      "basic-guides-what-is-sandbox-mode"
+    ],
+    "가이드 - 코어": [
+      "core-guides-model",
+      "core-guides-router",
+      "core-guides-business-logic"
+    ],
+    "가이드 - 모듈": [
+      "service-module-guides-authentication",
+      "service-module-guides-storage",
+      "service-module-guides-message",
+      "service-module-guides-payment"
+    ],
+    "가이드 - 퍼블릭": [
+      "public-api-header-and-validation",
+      "public-api-errors",
+      "public-api-test"
+    ]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
