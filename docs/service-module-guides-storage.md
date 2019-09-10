@@ -1,6 +1,20 @@
 ---
 id: service-module-guides-storage
-title: Storage
-sidebar_label: Storage
+title: 파일저장소
+sidebar_label: 파일저장소
 ---
-작성중
+
+이미지, 파일 등 이진파일(Binary) 형태의 정보를 저장할 수 있는 기능입니다. [[Multipart/form-data](https://naver.com)] 방식을 통해 쉽게 모델과 연동하여 정보를 저장할 수 있고 별도로 업로드도 가능합니다.
+
+## 연동하기
+
+1. 좌측에 모듈 추가에서 결제를 활성화 합니다.
+2. 원하시는 값을 초기로 지정하여 설정할 수 있으며 나중에 변경가능할 수 있습니다.
+
+## 버킷추가하기
+
+이렇게 넣으세요.
+
+## 버킷확인하기
+
+이렇게 확인가능함.
