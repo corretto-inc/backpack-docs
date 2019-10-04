@@ -28,9 +28,11 @@
     ],
     "가이드 - 퍼블릭": [
       "public-api-header-and-validation",
+      "public-api-how-to-manipulate-data-using-query",
       "public-api-errors",
       "public-api-test"
-    ]
+    ],
+    "가이드 - SDK": ["sdk-overview", "sdk-how-to-use-sdk-payment-servicemodule"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
