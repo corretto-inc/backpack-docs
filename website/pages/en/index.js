@@ -21,53 +21,57 @@ class HomeSplash extends React.Component {
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
-    const SplashContainer = props => (
-      <div className="homeContainer">
-        <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
-        </div>
+    const ContentCards = props => (
+      <div className="content-cards">
+        {props.items.map((item, key) => (
+          <div className="content-cards__card" key={key}>
+            <div className="content-cards__icon-wrapper">
+              <img className="content-cards__icon" src={item.icon}/>
+            </div>
+            <h4 className="content-cards__card-title">{item.title}</h4>
+            <p className="content-cards__card-description">{item.description}</p>
+            <a className="content-cards__card-link" href={item.href}>View</a>
+          </div>
+        ))}
       </div>
-    );
-
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
-
-    const ProjectTitle = () => (
-      <h2 className="projectTitle">
-        {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
-    );
-
-    const PromoSection = props => (
-      <div className="section promoSection">
-        <div className="promoRow">
-          <div className="pluginRowBlock">{props.children}</div>
-        </div>
-      </div>
-    );
-
-    const Button = props => (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
-          {props.children}
-        </a>
-      </div>
-    );
+    )
 
     return (
-      <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            <Button href="#try">Try It Out</Button>
-          </PromoSection>
+      <div className="main__wrapper">
+        <div className="main__limiter">
+          <div className="main__header">
+            <h2 className="main__header-title">코딩없이 만드는 API서버</h2>
+            <p className="main__header-description">코딩하지 않고 API 서버를 구성해보세요. 수십명이 쓰는 모바일 앱부터 수백만이 이용하는 웹서비스 까지 다양한 분야에서 사용이 가능합니다.</p>
+          </div>
+          <div className="main__content-cards">
+            <ContentCards
+              items={[
+                {
+                  icon: `${baseUrl}img/icon-api.svg`,
+                  alt: 'API 서버를 표현한 일러스트',
+                  title: '1분만에 만드는 API 서버',
+                  description: '백팩의 강력한 기능들이 최소한의 시간으로 API 서버의 구축과 운영을 가능하게 합니다!',
+                  href: `${baseUrl}docs/getting-started-overview`
+                },
+                {
+                  icon: `${baseUrl}img/icon-modules.svg`,
+                  alt: '백팩의 핵심 코어모듈을 표현한 일러스트',
+                  title: '백팩을 이루는 핵심 코어모듈',
+                  description: '유기적으로 연결 된 핵심 코어모듈 3가지를 알아보세요!',
+                  href: `${baseUrl}docs/core-guides-model`
+                },
+                {
+                  icon: `${baseUrl}img/icon-modules.svg`,
+                  alt: '고객지원센터를 표현한 일러스트',
+                  title: '고객지원센터',
+                  description: '매뉴얼을 통해 문제를 해결할 수 없으신가요? 기술지원 관련 문의를 통해 문의해주세요!',
+                  href: 'https://thebackpack.io/contact-us'
+                },
+              ]}
+            />
+          </div>
         </div>
-      </SplashContainer>
+      </div>
     );
   }
 }
@@ -75,126 +79,9 @@ class HomeSplash extends React.Component {
 class Index extends React.Component {
   render() {
     const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
-
-    const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-      </Container>
-    );
-
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
-
-    const TryOut = () => (
-      <Block id="try">
-        {[
-          {
-            content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
-            imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
-          },
-        ]}
-      </Block>
-    );
-
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
-        ]}
-      </Block>
-    );
-
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
-            imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-        ]}
-      </Block>
-    );
-
-    const Showcase = () => {
-      if ((siteConfig.users || []).length === 0) {
-        return null;
-      }
-
-      const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img src={user.image} alt={user.caption} title={user.caption} />
-          </a>
-        ));
-
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
-
-      return (
-        <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
-          <div className="logos">{showcase}</div>
-          <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              More {siteConfig.title} Users
-            </a>
-          </div>
-        </div>
-      );
-    };
 
     return (
-      <div>
-        <HomeSplash siteConfig={siteConfig} language={language} />
-      </div>
+      <HomeSplash siteConfig={siteConfig} language={language} />
     );
   }
 }
