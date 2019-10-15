@@ -43,9 +43,10 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
+  // TODO: favicon 수정 시 확인 요망
   headerIcon: "img/favicon.ico",
   footerIcon: "img/favicon.ico",
-  favicon: "img/favicon.ico",
+  // favicon: "img/favicon.ico",
 
   /* Colors for website */
   colors: {

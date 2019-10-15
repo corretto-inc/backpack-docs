@@ -61,7 +61,7 @@ class HomeSplash extends React.Component {
                   href: `${baseUrl}docs/core-guides-model`
                 },
                 {
-                  icon: `${baseUrl}img/icon-modules.svg`,
+                  icon: `${baseUrl}img/icon-circle-question.svg`,
                   alt: '고객지원센터를 표현한 일러스트',
                   title: '고객지원센터',
                   description: '매뉴얼을 통해 문제를 해결할 수 없으신가요? 기술지원 관련 문의를 통해 문의해주세요!',

@@ -13,7 +13,10 @@ class Footer extends React.Component {
     const docsUrl = this.props.config.docsUrl;
     const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
     const langPart = `${language ? `${language}/` : ''}`;
-    return `${baseUrl}${docsPart}${langPart}${doc}`;
+
+    // Footer의 Sitemap을 통한 링크 이동 시 페이지를 찾을 수 없어 lang part 일단 삭제하여 return하도록 변경하였습니다.
+    return `${baseUrl}${docsPart}${doc}`;
+    // return `${baseUrl}${docsPart}${langPart}${doc}`;
   }
 
   pageUrl(doc, language) {
