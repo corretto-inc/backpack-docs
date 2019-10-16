@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>결제 서비스모듈 SDK 사용하기 · 백엔드패키지 - 사용자매뉴얼</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="SDK를 활용하여 결제 서비스모듈을 쉽게 사용할 수 있는 방법을 알아봅니다. 10줄 코딩으로 웹이나 앱에서 쉽게 PG를 연동할 수 있는 모듈로써 서비스 수수료를 추가로 받지 않습니다."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="결제 서비스모듈 SDK 사용하기 · 백엔드패키지 - 사용자매뉴얼"/><meta property="og:type" content="website"/><meta property="og:url" content="https://corretto-inc.github.io/"/><meta property="og:description" content="SDK를 활용하여 결제 서비스모듈을 쉽게 사용할 수 있는 방법을 알아봅니다. 10줄 코딩으로 웹이나 앱에서 쉽게 PG를 연동할 수 있는 모듈로써 서비스 수수료를 추가로 받지 않습니다."/><meta property="og:image" content="https://corretto-inc.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://corretto-inc.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.ico" alt="백엔드패키지 - 사용자매뉴얼"/><h2 class="headerTitleWithLogo">백엔드패키지 - 사용자매뉴얼</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started-overview" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>가이드 - SDK</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">시작하기<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/getting-started-overview">개요</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started-creating-application">애플리케이션 생성하기</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started-using-three-core">세가지 코어 이용하기</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started-linking-service-module">서비스 모듈 연동하기</a></li><li class="navListItem"><a class="navItem" href="/docs/getting-started-requesting-your-api">API 요청하기</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">가이드 - 일반<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/basic-guides-dashboard">대시보드</a></li><li class="navListItem"><a class="navItem" href="/docs/basic-guides-how-to-manage-account">샌드박스모드</a></li><li class="navListItem"><a class="navItem" href="/docs/basic-guides-how-to-manage-rbac">RBAC 관리하기</a></li><li class="navListItem"><a class="navItem" href="/docs/basic-guides-register-and-use-coupon">쿠폰 등록 및 사용하기</a></li><li class="navListItem"><a class="navItem" href="/docs/basic-guides-register-credit-card">신용카드 등록하기</a></li><li class="navListItem"><a class="navItem" href="/docs/basic-guides-what-is-sandbox-mode">샌드박스모드</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">가이드 - 코어<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/core-guides-model">모델</a></li><li class="navListItem"><a class="navItem" href="/docs/core-guides-router">라우터</a></li><li class="navListItem"><a class="navItem" href="/docs/core-guides-business-logic">비즈니스 로직</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">가이드 - 모듈<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/service-module-guides-authentication">인증</a></li><li class="navListItem"><a class="navItem" href="/docs/service-module-guides-storage">파일저장소</a></li><li class="navListItem"><a class="navItem" href="/docs/service-module-guides-message">메시지</a></li><li class="navListItem"><a class="navItem" href="/docs/service-module-guides-payment">결제</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">가이드 - 퍼블릭<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/public-api-header-and-validation">헤더 세팅 및 유효성 확인하기</a></li><li class="navListItem"><a class="navItem" href="/docs/public-api-how-to-manipulate-data-using-query">쿼리를 활용하여 데이터다루기</a></li><li class="navListItem"><a class="navItem" href="/docs/public-api-errors">퍼블릭 API 에러목록</a></li><li class="navListItem"><a class="navItem" href="/docs/public-api-test">API 확인하기</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">가이드 - SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/sdk-overview">SDK 개요</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/sdk-how-to-use-sdk-payment-servicemodule">결제 서비스모듈 SDK 사용하기</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">결제 서비스모듈 SDK 사용하기</h1></header><article><div><span><p>SDK를 활용하여 결제 서비스모듈을 쉽게 사용할 수 있는 방법을 알아봅니다. 10줄 코딩으로 웹이나 앱에서 쉽게 PG를 연동할 수 있는 모듈로써 서비스 수수료를 추가로 받지 않습니다.</p>
+<h2><a class="anchor" aria-hidden="true" id="시작하기-전에"></a><a href="#시작하기-전에" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>시작하기 전에</h2>
+<p>웹에서 하나이상의 PG에 가입이되어 있고 어플리케이션에 결제 서비스모듈에 해당 PG가 연동이 되어있어야 합니다.
+연동이 되어있으면 <a href="https://naver.com">시작하기</a>로 넘어가시면 됩니다.</p>
+<h3><a class="anchor" aria-hidden="true" id="결제-연동하기"></a><a href="#결제-연동하기" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>결제 연동하기</h3>
+<p>이미지로 결제 연동방법을 설명합니다.</p>
+<h2><a class="anchor" aria-hidden="true" id="사용하기"></a><a href="#사용하기" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>사용하기</h2>
+<p>연동이 되었으면 SDK를 사용할 준비가 되신겁니다. 아래에서는 언어별로 결제를 사용하는 방법을 알아보겠습니다.</p>
+<h3><a class="anchor" aria-hidden="true" id="자바스크립트-타입스크립트-호환"></a><a href="#자바스크립트-타입스크립트-호환" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>자바스크립트 (타입스크립트 호환)</h3>
+<p>브라우저 사용 예</p>
+<pre><code class="hljs css language-Javascript">// Javascript version in browser
+&lt;script&gt;주소&lt;/script&gt;
+
+var bpPayment = new BP.Payment({
+  apiKey: '',
+  apiSecret: '',
+  applicationId: '',
+  paymentGatewayId: '',
+});
+
+// web page 호출 (Iframe)
+bpPayment.payment(function(resp) {
+  /* 결제 완료 후 호출. */
+
+  // 성공
+  if (resp.success) {
+    alert('결제성공');
+
+  // 실패
+  } else {
+    alert('결제실패');
+  }
+});
+
+</code></pre>
+<p>NodeJS, ReactJS 등, npm 패키지를 사용할 수 있는 곳에서의 사용 예</p>
+<p>설치</p>
+<pre><code class="hljs css language-Javascript">npm install @corretto/backpack
+<span class="hljs-comment">// or</span>
+yarn add @corretto/backpack
+</code></pre>
+<pre><code class="hljs css language-Typescript"><span class="hljs-comment">// Typescript version</span>
+<span class="hljs-keyword">import</span> { BP } <span class="hljs-keyword">from</span> <span class="hljs-string">'@corretto/backpack'</span>;
+
+<span class="hljs-keyword">const</span> bpPayment = <span class="hljs-keyword">new</span> BP.Payment({
+  apiKey: <span class="hljs-string">''</span>,
+  apiSecret: <span class="hljs-string">''</span>,
+  applicationId: <span class="hljs-string">''</span>,
+  paymentGatewayId: <span class="hljs-string">''</span>,
+});
+
+<span class="hljs-comment">// web page 호출 (Iframe)</span>
+bpPayment.payment(<span class="hljs-function">(<span class="hljs-params">resp</span>) =&gt;</span> {
+  <span class="hljs-comment">/* 결제 완료 후 호출. */</span>
+
+  <span class="hljs-comment">// 성공</span>
+  <span class="hljs-keyword">if</span> (resp.success) {
+    alert(<span class="hljs-string">'결제성공'</span>);
+
+  <span class="hljs-comment">// 실패</span>
+  } <span class="hljs-keyword">else</span> {
+    alert(<span class="hljs-string">'결제실패'</span>);
+  }
+});
+
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-4 by Wooyoung Tyler Kim</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sdk-overview"><span class="arrow-prev">← </span><span>SDK 개요</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#시작하기-전에">시작하기 전에</a><ul class="toc-headings"><li><a href="#결제-연동하기">결제 연동하기</a></li></ul></li><li><a href="#사용하기">사용하기</a><ul class="toc-headings"><li><a href="#자바스크립트-타입스크립트-호환">자바스크립트 (타입스크립트 호환)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.ico" alt="백엔드패키지 - 사용자매뉴얼" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/getting-started-overview.html">Getting Started</a><a href="/docs/basic-guides-dashboard.html">Guides</a></div><div><h5>More</h5><a href="https://thebackpack.io">Backpack</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Corretto, Inc.</section></footer></div></body></html>
